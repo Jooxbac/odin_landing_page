@@ -1,4 +1,4 @@
-# odin_landing_page
+# Odin Landing Page
 
 A basic landing page.
 

@@ -1,0 +1,5 @@
+The font is Roboto [X]
+Hero text is the statement that appears at the top of a web page []
+Do the HTLM, then CSS []
+Using one stylesheet is adequate for this project [X]
+Make it visible in the web []

@@ -1,23 +1,140 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+:root {
+  --quote-text-or-info-header-or-dark-background-color: #1f2937;
+  --button-or-cta-background-color: #3882f6;
+  --link-or-quote-section-bg-or-hero-secondary-text-color: #e5e7eb;
+  --header-or-hero-main-text-color: #f9faf8;
+
+  --link-or-hero-secondary-text-size: 18px;
+  --header-logo-text-size: 24px;
+  --hero-main-text-size: 48px;
+  --quote-or-info-header-text-size: 36px;
+
+  --quote-text-style: "italic";
+
+  --info-header-or-hero-main-text-weight: "extra-bold";
+  --quote-text-weight: "light";
+}
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: "Roboto", "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
-body{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-body>*{
-    border: 2px solid red;
+header,
+footer,
+section:first-of-type {
+  background-color: var(--quote-text-or-info-header-or-dark-background-color);
 }
 
-main>*{
-    margin: 20px;
-    border: 1px solid green;
+header > p {
+  color: var(--header-or-hero-main-text-color);
+  font-size: var(--header-logo-text-size);
+}
+
+header > nav {
+  color: var(--link-or-quote-section-bg-or-hero-secondary-text-color);
+  font-size: var(--link-or-hero-secondary-text-size);
+}
+
+a,
+a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+.hero-text {
+  color: var(--header-or-hero-main-text-color);
+  font-size: var(--hero-main-text-size);
+  font-weight: var(--info-header-or-hero-main-text-weight);
+}
+
+.hero-secondary-text,
+.img-placeholder,
+.card > p,
+.cta-subtext,
+footer > p {
+  color: var(--link-or-quote-section-bg-or-hero-secondary-text-color);
+  font-size: var(--link-or-hero-secondary-text-size);
+}
+
+button {
+  background-color: var(--button-or-cta-background-color);
+  border-radius: 10%;
+  color: white;
+  font-size: var(--link-or-hero-secondary-text-size);
+}
+
+.img-placeholder {
+  background-color: gray;
+  height: 100px;
+  width: 200px;
+}
+
+section.info > p {
+  color: var(--quote-text-or-info-header-or-dark-background-color);
+  font-size: var(--quote-or-info-header-text-size);
+  font-weight: var(--info-header-or-hero-main-text-weight);
+}
+
+.card > div {
+  background-color: #white;
+  border: 2px solid #3882f6;
+  border-radius: 10%;
+  height: 30px;
+  width: 30px;
+}
+
+section.quote {
+  background-color: var(
+    --link-or-quote-section-bg-or-hero-secondary-text-color
+  );
+}
+
+section.quote > p {
+  color: var(--quote-text-or-info-header-or-dark-background-color);
+  font-size: var(--quote-or-info-header-text-size);
+  font-style: var(--quote-text-style);
+  font-weight: var(--quote-text-weight);
+}
+
+section.quote > .author,
+.cta-text {
+  color: var(--quote-text-or-info-header-or-dark-background-color);
+  font-size: var(--header-logo-text-size);
+  font-style: none;
+  font-weight: var(--info-header-or-hero-main-text-weighteight);
+}
+
+.cta-box {
+  background-color: var(--button-or-cta-background-color);
+}
+
+.cta-text {
+  color: white;
+}
+
+.cta button {
+  border: 1px solid white;
+}
+
+/* TEST */
+
+body > * {
+  border: 2px solid red;
+}
+
+main > * {
+  margin: 20px;
+  border: 1px solid green;
 }
